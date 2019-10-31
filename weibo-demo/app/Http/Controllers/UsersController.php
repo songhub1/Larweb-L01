@@ -37,6 +37,8 @@ class UsersController extends Controller
         // session() 访问会话实例
         // flash() 只在下一次的请求内有效
         // 之后可以使用 session()->get('success') 取出值
+        // 注册成功后自动登陆
+        Auth::login($user);
         session()->flash('success', '欢迎， 您将在这里开启一段新的旅程～');
         // 重定向个人页面
         return redirect()->route('users.show',[$user]);
