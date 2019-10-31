@@ -8,6 +8,7 @@
       <h5>注册</h5>
     </div>
     <div class="card-body">
+      @include('shared._errors')
       <form method="POST" action="{{ route('users.store') }}">
         <!-- Laravel 为了安全考虑，会让我们提供一个 token（令牌）来防止我们的应用受到 CSRF（跨站请求伪造）的攻击-->
           {{ csrf_field() }}
