@@ -18,7 +18,7 @@ class SessionsController extends Controller
             'password' => 'required'
         ]);
 
-        if(Auth::attempt($credentials)) {
+        if(Auth::attempt($credentials, $request->has('remember'))) {
             // 该用户存在于数据库， 且邮箱和密码相符合
             // 登陆成功后相关操作
             session()->flash('success', '欢迎回来！');
