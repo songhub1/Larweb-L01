@@ -6,7 +6,7 @@
       <a class="nav-link" href="{{ route('help') }}">帮助</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">登陆</a>
+        <a class="nav-link" href="{{ route('login') }}">登陆</a>
       </li>
     </ul>
   </div>
